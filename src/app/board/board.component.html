@@ -1,17 +1,27 @@
-<h1>Current player: {{ player }}</h1>
+<body>
+    <div class="left">
+        <h1>Current player: {{ player }}</h1>
 
-<button (click)="newGame()">New Game</button>
+        <button (click)="newGame()">New Game</button>
 
-<!-- Winner -->
-<h2 *ngIf="winner">
-    Player {{ player }} won the game
-</h2>
+        <!-- Winner -->
+        <div *ngIf="winner" class="winner">
+        <!-- <div class="winner"> -->
+            <h3>Player {{ player }} won the game </h3>
+            <h3 style="text-align: center; color: rgb(250, 191, 221);">
+                \(●'◡'●)/
+            </h3>
+        </div>
+    </div>
 
-<main>
-    <app-square
-        *ngFor="let square of squares; let i = index"
-        [value] = square
-        (click)="makeMove(i)"
-        >
-    </app-square>
-</main>
+    <div class="right">
+        <app-square
+            *ngFor="let square of squares; let i = index"
+            [value] = square
+            (click)="makeMove(i)"
+            >
+        </app-square>
+    </div>
+
+
+</body>

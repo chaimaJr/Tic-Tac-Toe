@@ -1,10 +1,57 @@
 app-square {
-    height: 130px;
-    border: 1px solid gray;
+    height: 110px;
 }
 
-main {
+body {
+    margin: 80px auto;
+    width: 70%;
+    display: flex;
+    align-content: space-around;
+    letter-spacing: 0.8px;
+
+}
+
+.right {
     display: grid;
-    grid-template-columns: 130px 130px 130px;
-    grid-gap: 0cm;
+    grid-template-columns: 110px 110px 110px;
+    grid-gap: 0cm;    
+    padding: 0 100px 0 100px;
+    
+}
+
+.left {
+    width: 50%
+}
+
+.left button {
+    background-color: rgb(39, 33, 74);
+    border: none;
+    border-radius: 5px;
+
+    padding: 10px 30px;
+    margin: 30px auto 50px auto;
+    width: 60%;
+    display: block; 
+
+    color: white;
+    font-family: 'Outfit';
+    letter-spacing: 1px;
+}
+
+.left button:hover {
+    // background-color:rgb(216, 211, 241);
+    background-color: rgb(28, 23, 54);
+
+
+}
+
+.left button:active {
+    background-color: rgb(28, 23, 54);
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.winner {
+    background-color: rgb(31, 26, 61);
+
+    padding: 10px 30px
 }
